@@ -2,30 +2,30 @@ package no.hvl.dat110.ac.restservice;
 
 public class AccessEntry {
 
-	// class describing access entries stored on the service
-	private Integer id;
-	private String message;
-	
-	public AccessEntry(int id, String message) {
-		this.id = id;
-		this.message = message;
-	}
+    // class describing access entries stored on the service
+    private Integer id;
+    private String message;
 
-	public Integer getId() {
-		return id;
-	}
+    public AccessEntry(int id, String message) {
+        this.id = id;
+        this.message = message;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getMessage() {
-		return message;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+    public String getMessage() {
+        return message;
+    }
 
-	
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
 }
