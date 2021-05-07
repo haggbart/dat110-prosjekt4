@@ -1,6 +1,7 @@
 package no.hvl.dat110.ac.restservice;
 
 import com.google.gson.Gson;
+import org.eclipse.jetty.client.HttpResponse;
 
 import static spark.Spark.*;
 
@@ -37,6 +38,7 @@ public class App {
         // POST /accessdevice/log/
         post("/accessdevice/log/", (request, response) -> {
             int id = accesslog.add(gson.fromJson(request.body(), AccessMessage.class).getMessage());
+            response.status(201);
             return gson.toJson(accesslog.get(id));
         });
 
