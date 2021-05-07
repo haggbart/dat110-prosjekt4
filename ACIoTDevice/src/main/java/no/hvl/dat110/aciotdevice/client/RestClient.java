@@ -5,16 +5,21 @@ import com.squareup.okhttp.*;
 
 import java.io.IOException;
 
+import static no.hvl.dat110.aciotdevice.client.Configuration.*;
+
 public class RestClient {
 
     private static final String LOGPATH = "/accessdevice/log/";
     private static final String CODEPATH = "/accessdevice/code";
-    private static final OkHttpClient client = new OkHttpClient();
     private static final Gson gson = new Gson();
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-    public static final String URL = "http://localhost:8080";
+    public static final String URL = "http://" + HOST + ":" + PORT;
 
-    public RestClient() { }
+    private final OkHttpClient client;
+
+    public RestClient() {
+        this.client = new OkHttpClient();
+    }
 
     public void doPostAccessEntry(String message) {
 

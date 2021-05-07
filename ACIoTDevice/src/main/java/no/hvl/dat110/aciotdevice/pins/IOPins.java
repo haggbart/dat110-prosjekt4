@@ -4,9 +4,9 @@ import no.hvl.dat110.aciotdevice.ui.LED;
 
 public class IOPins {
 
-    private LED greenled, yellowled, redled, blueled;
+    private final LED greenled, yellowled, redled, blueled;
 
-    private int[] pins;
+    private final int[] pins;
 
     public IOPins(LED greenled, LED yellowled, LED redled, LED blueled) {
 

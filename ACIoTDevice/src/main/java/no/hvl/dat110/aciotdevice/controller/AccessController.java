@@ -18,7 +18,7 @@ public class AccessController extends MicroController {
     int secondpressed = 0;
     // state for the use of networking
     int netmode = 0;
-    private RestClient client;
+    private final RestClient client;
     // current access code - default is 1 -> 2
     private int[] code = {1, 2};
 
