@@ -26,9 +26,7 @@ public class App {
         accesslog = new AccessLog();
         accesscode = new AccessCode();
 
-        after((req, res) -> {
-            res.type("application/json");
-        });
+        after((req, res) -> res.type("application/json"));
 
         // for basic testing purposes
         get("/accessdevice/hello", (req, res) -> gson.toJson("IoT Access Control Device"));
@@ -37,10 +35,10 @@ public class App {
         // as per the HTTP/REST operations describined in the project description
 
         // POST /accessdevice/log/
-        post("/accessdevice/log/", ((request, response) -> {
+        post("/accessdevice/log/", (request, response) -> {
             int id = accesslog.add(gson.fromJson(request.body(), AccessMessage.class).getMessage());
             return gson.toJson(accesslog.get(id));
-        }));
+        });
 
         // GET /accessdevice/log/
         get("/accessdevice/log/", (request, response) ->
@@ -51,20 +49,20 @@ public class App {
                 gson.toJson(accesslog.get(Integer.parseInt(request.params("id")))));
 
         // PUT /accessdevice/code
-        put("/accessdevice/code", ((request, response) -> {
+        put("/accessdevice/code", (request, response) -> {
             accesscode = gson.fromJson(request.body(), AccessCode.class);
             // kunne returnert body tilbake, men det ville ikke vist at ting er gjort riktig.
             return gson.toJson(accesscode);
-        }));
+        });
 
         // GET /accessdevice/code
-        get("/accessdevice/code", (((request, response) ->
-                gson.toJson(accesscode))));
+        get("/accessdevice/code", (request, response) ->
+                gson.toJson(accesscode));
 
         // DELETE /accessdevice/log/
-        delete("accessdevice/log/", ((request, response) -> {
+        delete("accessdevice/log/", (request, response) -> {
             accesslog.clear();
             return gson.toJson(accesslog.log.values());
-        }));
+        });
     }
 }
