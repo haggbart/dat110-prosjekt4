@@ -12,13 +12,13 @@ public class AccessController extends MicroController {
     final int WAIT2P = 2;
     final int CHECKING = 3;
     final int UNLOCKED = 4;
+    private final RestClient client;
     int state = LOCKED;
     // keep track of the order in which buttons are pressed
     int firstpressed = 0;
     int secondpressed = 0;
     // state for the use of networking
     int netmode = 0;
-    private final RestClient client;
     // current access code - default is 1 -> 2
     private int[] code = {1, 2};
 

@@ -41,7 +41,7 @@ public class App {
 		// for basic testing purposes
 		get("/accessdevice/hello", (req, res) -> gson.toJson("IoT Access Control Device"));
 		
-		// TODO: implement the routes required for the access control service
+		// implement the routes required for the access control service
 		// as per the HTTP/REST operations describined in the project description
 
 		// POST /accessdevice/log/
