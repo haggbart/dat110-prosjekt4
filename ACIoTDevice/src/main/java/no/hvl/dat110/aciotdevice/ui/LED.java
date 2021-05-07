@@ -4,7 +4,7 @@ import javafx.scene.control.Button;
 
 public class LED extends Button {
 
-    private String oncolor, offcolor;
+    private final String oncolor, offcolor;
 
     public LED(String label, String oncolor, String offcolor) {
 

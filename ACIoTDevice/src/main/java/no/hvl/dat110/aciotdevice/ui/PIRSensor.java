@@ -9,7 +9,7 @@ import no.hvl.dat110.aciotdevice.pins.IOPins;
 public class PIRSensor extends Button {
 
     int pin;
-    private IOPins iopins;
+    private final IOPins iopins;
 
     public PIRSensor(String label, IOPins iopins, int pin) {
 

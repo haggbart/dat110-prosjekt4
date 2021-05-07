@@ -1,7 +1,6 @@
 package no.hvl.dat110.ac.restservice;
 
 import com.google.gson.Gson;
-import org.eclipse.jetty.client.HttpResponse;
 
 import static spark.Spark.*;
 

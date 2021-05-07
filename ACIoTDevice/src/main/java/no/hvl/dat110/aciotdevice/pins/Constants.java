@@ -8,8 +8,5 @@ public class Constants {
     public static int INPUT = 0;
     public static int OUTPUT = 1;
 
-    public Constants() {
-        // TODO Auto-generated constructor stub
-    }
-
+    public Constants() { }
 }

@@ -15,6 +15,4 @@ public class AccessCode {
     public void setAccesscode(int[] accesscode) {
         this.accesscode = accesscode;
     }
-
-
 }
